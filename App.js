@@ -1,19 +1,17 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Provider } from 'react-redux';
+import store from './src/store';
+import Root from './src/routes';
+
+// This is used in order to see requests on the Chrome DevTools
+XMLHttpRequest = GLOBAL.originalXMLHttpRequest
+  ? GLOBAL.originalXMLHttpRequest
+  : GLOBAL.XMLHttpRequest;
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
+    <Provider store={store}>
+      <Root />
+    </Provider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
