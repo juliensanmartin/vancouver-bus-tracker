@@ -32,7 +32,7 @@ const carLoaded = (state = false, action) => {
   }
 }
 
-const car2go = (state = {visible:true}, action) => {
+const car2go = (state = {visible:false}, action) => {
   switch (action.type) {
     case SET_CAR2GO_VISIBILITY:
       return {
@@ -43,7 +43,7 @@ const car2go = (state = {visible:true}, action) => {
   }
 }
 
-const evo = (state = {visible:true}, action) => {
+const evo = (state = {visible:false}, action) => {
   switch (action.type) {
     case SET_EVO_VISIBILITY:
       return {
@@ -54,7 +54,7 @@ const evo = (state = {visible:true}, action) => {
   }
 }
 
-const translink = (state = {visible:false}, action) => {
+const translink = (state = {visible:true}, action) => {
   switch (action.type) {
     case SET_BUS_VISIBILITY:
       return {
