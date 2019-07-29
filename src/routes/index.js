@@ -1,7 +1,7 @@
 import React from 'react';
-import { TabNavigator, StackNavigator, DrawerNavigator } from 'react-navigation';
+import { StackNavigator } from 'react-navigation';
 import { Icon } from 'react-native-elements';
-import { TouchableOpacity, View } from 'react-native';
+import { TouchableOpacity } from 'react-native';
 import styled from 'styled-components/native';
 import MapScreen from '../screens/Map/index';
 import AboutComponent from '../screens/About/index';
@@ -39,43 +39,43 @@ export default StackNavigator(
           </StyledRightSideHeader>
         ),
         headerTitleStyle: {
-          color: '#135589',
+          color: '#135589'
         },
         headerStyle: {
-          backgroundColor: '#edfafd',
-        },
-      }),
+          backgroundColor: '#edfafd'
+        }
+      })
     },
     Settings: {
       screen: Settings,
       navigationOptions: {
         title: 'SETTINGS',
         headerTitleStyle: {
-          color: '#135589',
+          color: '#135589'
         },
         headerStyle: {
-          backgroundColor: '#edfafd',
-        },
-      },
+          backgroundColor: '#edfafd'
+        }
+      }
     },
     About: {
       screen: AboutComponent,
       navigationOptions: {
         title: 'ABOUT',
         headerTitleStyle: {
-          color: '#135589',
+          color: '#135589'
         },
         headerStyle: {
-          backgroundColor: '#edfafd',
-        },
-      },
-    },
+          backgroundColor: '#edfafd'
+        }
+      }
+    }
   },
   {
     cardStyle: {
       backgroundColor: '#aed9da',
-      opacity: 1,
-    },
+      opacity: 1
+    }
   }
 );
 

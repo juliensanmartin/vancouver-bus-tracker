@@ -1,24 +1,23 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import CarDetailsComponent from '../../components/CarDetails/car-details'
-import { fetchDistance, fetchDirection } from '../../store/Distance/actions'
-import { propagateErrorLinking } from '../../store/Error/actions'
-import { connect } from 'react-redux'
-import { NavigationActions } from 'react-navigation'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import CarDetailsComponent from '../../components/CarDetails/car-details';
+import { fetchDistance, fetchDirection } from '../../store/Distance/actions';
+import { propagateErrorLinking } from '../../store/Error/actions';
 
 class CarDetails extends Component {
   componentWillMount() {
-    const {currentPosition, marker, positionInVancouver, dispatch} = this.props
+    const { currentPosition, marker, positionInVancouver, dispatch } = this.props;
     if (positionInVancouver) {
       Promise.all([
         dispatch(fetchDistance(currentPosition, marker.latlng)),
         dispatch(fetchDirection(currentPosition, marker.latlng))
-      ])
+      ]);
     }
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    return nextProps.visible
+  shouldComponentUpdate(nextProps) {
+    return nextProps.visible;
   }
 
   render() {
@@ -30,8 +29,9 @@ class CarDetails extends Component {
         onLinkingError={this.props.onLinkingError}
         errorLinking={this.props.errorLinking}
         visible={this.props.visible}
-        onClose={this.props.onClose}/>
-    )
+        onClose={this.props.onClose}
+      />
+    );
   }
 }
 
@@ -44,23 +44,26 @@ CarDetails.propTypes = {
   marker: PropTypes.object.isRequired,
   currentPosition: PropTypes.object.isRequired,
   onClose: PropTypes.func.isRequired
-}
+};
 
 function mapStateToProps(state) {
   return {
     distance: state.distance.distance,
     positionInVancouver: state.distance.positionInVancouver,
     errorLinking: state.errors.errorLinking
-  }
+  };
 }
 
-function mapDispatchToProps (dispatch) {
+function mapDispatchToProps(dispatch) {
   return {
-    onLinkingError: (message) => {
-      dispatch(propagateErrorLinking(message))
+    onLinkingError: message => {
+      dispatch(propagateErrorLinking(message));
     },
-    dispatch: dispatch
-  }
+    dispatch
+  };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(CarDetails)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(CarDetails);

@@ -1,4 +1,4 @@
-import { reduce, chunk, each, split, toNumber } from 'lodash'
+import { reduce } from 'lodash';
 import {
   SET_EVO_VISIBILITY,
   SET_CAR2GO_VISIBILITY,
@@ -9,14 +9,20 @@ import {
   GET_VISIBLE_CARS,
   CARS_LOADED,
   ON_REGION_CHANGE
- } from './actions.type'
-import { PROPAGATE_ERROR, RESET_ERROR } from '../Error/actions.type'
-import { getAvailableVehicleCar2Go } from '../../services/car2go.api'
-import { getAvailableVehicleEvo } from '../../services/evo.api'
-import { getAvailableBus } from '../../services/translink.api'
-import { getAvailableMobi } from '../../services/mobi.api'
-import { getModoCars } from '../../services/modo.api'
-import { car2goVehicleNormalizer, evoVehicleNormalizer, busNormalizer, mobiNormalizer, modoVehicleNormalizer } from './schema'
+} from './actions.type';
+import { PROPAGATE_ERROR, RESET_ERROR } from '../Error/actions.type';
+import { getAvailableVehicleCar2Go } from '../../services/car2go.api';
+import { getAvailableVehicleEvo } from '../../services/evo.api';
+import { getAvailableBus } from '../../services/translink.api';
+import { getAvailableMobi } from '../../services/mobi.api';
+import { getModoCars } from '../../services/modo.api';
+import {
+  car2goVehicleNormalizer,
+  evoVehicleNormalizer,
+  busNormalizer,
+  mobiNormalizer,
+  modoVehicleNormalizer
+} from './schema';
 
 export const fetchVisibleCars = () => (dispatch, getState) => {
   dispatch({

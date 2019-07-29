@@ -1,14 +1,26 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import FilterComponent from '../../components/Filter/filter'
-import { setEvoVisibility, setCar2GoVisibility, setBusVisibility, setMobiVisibility, setModoVisibility } from '../../store/Car/actions'
-import { getCar2GoVisibility, getEvoVisibility, getBusVisibility, getMobiVisibility, getModoVisibility, getModoHoursAvailable } from '../../store/Car/selectors'
-import { connect } from 'react-redux'
-import { NavigationActions } from 'react-navigation'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import FilterComponent from '../../components/Filter/filter';
+import {
+  setEvoVisibility,
+  setCar2GoVisibility,
+  setBusVisibility,
+  setMobiVisibility,
+  setModoVisibility
+} from '../../store/Car/actions';
+import {
+  getCar2GoVisibility,
+  getEvoVisibility,
+  getBusVisibility,
+  getMobiVisibility,
+  getModoVisibility,
+  getModoHoursAvailable
+} from '../../store/Car/selectors';
 
 class Filter extends Component {
-  shouldComponentUpdate(nextProps, nextState) {
-    return nextProps.visible
+  shouldComponentUpdate(nextProps) {
+    return nextProps.visible;
   }
 
   render() {
@@ -26,8 +38,9 @@ class Filter extends Component {
         modoVisible={this.props.modoVisible}
         modoHoursAvailable={this.props.modoHoursAvailable}
         visible={this.props.visible}
-        onClose={this.props.onClose}/>
-    )
+        onClose={this.props.onClose}
+      />
+    );
   }
 }
 
@@ -45,7 +58,7 @@ Filter.propTypes = {
   onModoToggle: PropTypes.func.isRequired,
   visible: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired
-}
+};
 
 function mapStateToProps(state) {
   return {
@@ -55,27 +68,30 @@ function mapStateToProps(state) {
     mobiVisible: getMobiVisibility(state),
     modoVisible: getModoVisibility(state),
     modoHoursAvailable: getModoHoursAvailable(state)
-  }
+  };
 }
 
-function mapDispatchToProps (dispatch) {
+function mapDispatchToProps(dispatch) {
   return {
-    onEvoToggle: (visible) => {
-      dispatch(setEvoVisibility(visible))
+    onEvoToggle: visible => {
+      dispatch(setEvoVisibility(visible));
     },
-    onCar2GoToggle: (visible) => {
-      dispatch(setCar2GoVisibility(visible))
+    onCar2GoToggle: visible => {
+      dispatch(setCar2GoVisibility(visible));
     },
-    onBusToggle: (visible) => {
-      dispatch(setBusVisibility(visible))
+    onBusToggle: visible => {
+      dispatch(setBusVisibility(visible));
     },
-    onMobiToggle: (visible) => {
-      dispatch(setMobiVisibility(visible))
+    onMobiToggle: visible => {
+      dispatch(setMobiVisibility(visible));
     },
-    onModoToggle: (visible) => {
-      dispatch(setModoVisibility(visible))
+    onModoToggle: visible => {
+      dispatch(setModoVisibility(visible));
     }
-  }
+  };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Filter)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Filter);

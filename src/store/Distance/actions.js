@@ -1,11 +1,11 @@
-import Polyline from '@mapbox/polyline'
+import Polyline from '@mapbox/polyline';
 import {
   GET_CURRENT_DISTANCE,
   GET_CURRENT_DIRECTION,
   CHECK_POSITION_IN_VANCOUVER,
   RESET_DIRECTION
- } from './actions.type'
-import { PROPAGATE_ERROR, RESET_ERROR } from '../Error/actions.type'
+} from './actions.type';
+import { PROPAGATE_ERROR, RESET_ERROR } from '../Error/actions.type';
 import { getTimeAndDistance, getDirection } from '../../services/google-map.api';
 
 export const fetchDistance = (origin, destination) => dispatch =>
@@ -32,8 +32,8 @@ export const fetchDistance = (origin, destination) => dispatch =>
 export const fetchDirection = (origin, destination) => dispatch =>
   getDirection(origin, destination).then(
     response => {
-      let points = Polyline.decode(response.routes[0].overview_polyline.points);
-      let coords = points.map((point, index) => ({
+      const points = Polyline.decode(response.routes[0].overview_polyline.points);
+      const coords = points.map((point, index) => ({
         latitude: point[0],
         longitude: point[1]
       }));

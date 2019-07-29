@@ -1,23 +1,23 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import MapComponent from '../../components/Map/map'
-import { fetchVisibleCars, updateRegion, activateLoader } from '../../store/Car/actions'
-import { checkPositionInVancouver, resetDirection } from '../../store/Distance/actions'
-import { getVisibleMarkers, isLoaded, getRegionMarkers } from '../../store/Car/selectors'
-import { connect } from 'react-redux'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import MapComponent from '../../components/Map/map';
+import { fetchVisibleCars, updateRegion, activateLoader } from '../../store/Car/actions';
+import { checkPositionInVancouver, resetDirection } from '../../store/Distance/actions';
+import { isLoaded, getRegionMarkers } from '../../store/Car/selectors';
 
 class MapScreen extends Component {
   componentDidMount() {
-    this.props.dispatch(fetchVisibleCars())
+    this.props.dispatch(fetchVisibleCars());
   }
 
   componentWillUnmount() {
-    this.props.dispatch(resetDirection())
+    this.props.dispatch(resetDirection());
   }
 
-  onRefreshMap () {
-    this.props.dispatch(fetchVisibleCars())
-    this.props.dispatch(activateLoader())
+  onRefreshMap() {
+    this.props.dispatch(fetchVisibleCars());
+    this.props.dispatch(activateLoader());
   }
 
   render() {
@@ -32,8 +32,9 @@ class MapScreen extends Component {
         onPositionFetched={this.props.onPositionFetched}
         positionInVancouver={this.props.positionInVancouver}
         errorApi={this.props.errorApi}
-        refreshMap={() => this.onRefreshMap()}/>
-    )
+        refreshMap={() => this.onRefreshMap()}
+      />
+    );
   }
 }
 
@@ -47,7 +48,7 @@ MapScreen.propTypes = {
   onPositionFetched: PropTypes.func.isRequired,
   positionInVancouver: PropTypes.bool.isRequired,
   errorApi: PropTypes.string.isRequired
-}
+};
 
 function mapStateToProps(state) {
   return {
@@ -55,24 +56,27 @@ function mapStateToProps(state) {
     loading: !isLoaded(state),
     direction: state.distance.direction,
     positionInVancouver: state.distance.positionInVancouver,
-    errorApi: state.errors.errorApi,
-  }
+    errorApi: state.errors.errorApi
+  };
 }
 
-function mapDispatchToProps (dispatch) {
+function mapDispatchToProps(dispatch) {
   return {
-    onRegionChangeComplete: (region) => {
-      dispatch(updateRegion(region))
+    onRegionChangeComplete: region => {
+      dispatch(updateRegion(region));
     },
     onRegionChange: () => {
-      dispatch(activateLoader())
+      dispatch(activateLoader());
     },
-    onPositionFetched: (coord) => {
-      dispatch(checkPositionInVancouver(coord))
+    onPositionFetched: coord => {
+      dispatch(checkPositionInVancouver(coord));
     },
 
-    dispatch: dispatch
-  }
+    dispatch
+  };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(MapScreen)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(MapScreen);
