@@ -3,9 +3,9 @@ import { StackNavigator } from 'react-navigation';
 import { Icon } from 'react-native-elements';
 import { TouchableOpacity } from 'react-native';
 import styled from 'styled-components/native';
-import MapScreen from '../screens/Map/index';
-import AboutComponent from '../screens/About/index';
-import Settings from '../screens/Settings/index';
+import MapScreen from '../screens/map';
+import AboutComponent from '../screens/about';
+import Settings from '../screens/settings';
 
 export default StackNavigator(
   {
