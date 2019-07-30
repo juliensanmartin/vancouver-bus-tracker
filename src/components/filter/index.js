@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from './node_modules/react';
+import PropTypes from './node_modules/prop-types';
 import { Animated, StyleSheet, Modal } from 'react-native';
-import styled from 'styled-components/native';
+import styled from './node_modules/styled-components/native';
 import Interactable from 'react-native-interactable';
 
 export default class FilterComponent extends Component {

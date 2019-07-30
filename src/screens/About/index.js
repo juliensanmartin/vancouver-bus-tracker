@@ -1,5 +1,5 @@
-import React, { PureComponent } from 'react';
-import styled from 'styled-components/native';
+import React, { PureComponent } from './node_modules/react';
+import styled from './node_modules/styled-components/native';
 
 export default function AboutComponent() {
   return (

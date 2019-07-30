@@ -1,4 +1,4 @@
-import { reduce } from 'lodash';
+import { reduce } from './node_modules/lodash';
 import {
   SET_EVO_VISIBILITY,
   SET_CAR2GO_VISIBILITY,
@@ -10,7 +10,7 @@ import {
   CARS_LOADED,
   ON_REGION_CHANGE
 } from './actions.type';
-import { PROPAGATE_ERROR, RESET_ERROR } from '../Error/actions.type';
+import { PROPAGATE_ERROR, RESET_ERROR } from '../error/actions.type';
 import { getAvailableVehicleCar2Go } from '../../services/car2go.api';
 import { getAvailableVehicleEvo } from '../../services/evo.api';
 import { getAvailableBus } from '../../services/translink.api';

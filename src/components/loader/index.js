@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from './node_modules/react';
+import PropTypes from './node_modules/prop-types';
 import { View } from 'react-native';
 import Animation from 'lottie-react-native';
 
@@ -25,7 +25,7 @@ export default class LoaderComponent extends Component {
               height: 150
             }}
             loop
-            source={require('./assets/loader_ring.json')}
+            source={require('./assets/loader_ring.json.js')}
           />
         )}
       </View>

@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import SettingsComponent from '../../components/Settings/settings';
-import { setModoHoursAvailable } from '../../store/Car/actions';
+import React, { Component } from './node_modules/react';
+import PropTypes from './node_modules/prop-types';
+import { connect } from './node_modules/react-redux';
+import SettingsComponent from '../../components/settings';
+import { setModoHoursAvailable } from '../../store/car/actions';
 
 function Settings() {
   return (

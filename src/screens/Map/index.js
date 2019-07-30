@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import MapComponent from '../../components/Map/map';
-import { fetchVisibleCars, updateRegion, activateLoader } from '../../store/Car/actions';
-import { checkPositionInVancouver, resetDirection } from '../../store/Distance/actions';
-import { isLoaded, getRegionMarkers } from '../../store/Car/selectors';
+import React, { Component } from './node_modules/react';
+import PropTypes from './node_modules/prop-types';
+import { connect } from './node_modules/react-redux';
+import MapComponent from '../../components/map';
+import { fetchVisibleCars, updateRegion, activateLoader } from '../../store/car/actions';
+import { checkPositionInVancouver, resetDirection } from '../../store/distance/actions';
+import { isLoaded, getRegionMarkers } from '../../store/car/selectors';
 
 class MapScreen extends Component {
   componentDidMount() {

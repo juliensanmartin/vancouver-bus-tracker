@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import FilterComponent from '../../components/Filter/filter';
+import React, { Component } from './node_modules/react';
+import PropTypes from './node_modules/prop-types';
+import { connect } from './node_modules/react-redux';
+import FilterComponent from '../../components/filter';
 import {
   setEvoVisibility,
   setCar2GoVisibility,
   setBusVisibility,
   setMobiVisibility,
   setModoVisibility
-} from '../../store/Car/actions';
+} from '../../store/car/actions';
 import {
   getCar2GoVisibility,
   getEvoVisibility,
@@ -16,7 +16,7 @@ import {
   getMobiVisibility,
   getModoVisibility,
   getModoHoursAvailable
-} from '../../store/Car/selectors';
+} from '../../store/car/selectors';
 
 class Filter extends Component {
   shouldComponentUpdate(nextProps) {

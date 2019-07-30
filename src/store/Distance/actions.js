@@ -1,11 +1,11 @@
-import Polyline from '@mapbox/polyline';
+import Polyline from './node_modules/@mapbox/polyline';
 import {
   GET_CURRENT_DISTANCE,
   GET_CURRENT_DIRECTION,
   CHECK_POSITION_IN_VANCOUVER,
   RESET_DIRECTION
 } from './actions.type';
-import { PROPAGATE_ERROR, RESET_ERROR } from '../Error/actions.type';
+import { PROPAGATE_ERROR, RESET_ERROR } from '../error/actions.type';
 import { getTimeAndDistance, getDirection } from '../../services/google-map.api';
 
 export const fetchDistance = (origin, destination) => dispatch =>

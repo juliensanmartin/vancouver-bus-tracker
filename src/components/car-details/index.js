@@ -4,7 +4,7 @@ import { Platform, Linking, Animated, StyleSheet, Modal } from 'react-native';
 import styled from 'styled-components/native';
 import { Icon } from 'react-native-elements';
 import Interactable from 'react-native-interactable';
-import ToastComponent from '../Toast/index';
+import ToastComponent from '../toast/toast';
 
 export default class CarDetailsComponent extends Component {
   constructor(props) {

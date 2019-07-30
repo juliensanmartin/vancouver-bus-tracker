@@ -4,17 +4,17 @@ import {
   ActivityIndicator,
   TouchableOpacity
 } from 'react-native';
-import { Icon } from 'react-native-elements';
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import { Icon } from './node_modules/react-native-elements';
+import React, { Component } from './node_modules/react';
+import PropTypes from './node_modules/prop-types';
 import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
-import styled from 'styled-components/native';
-import LoaderComponent from '../Loader/loader';
-import ToastComponent from '../Toast/index';
-import IconMarkerComponent from '../../components/IconMarker/icon-marker';
-import CarDetailsScreen from '../../screens/CarDetails/index';
-import FilterScreen from '../../screens/Filter/index';
-import { debounce } from 'lodash';
+import styled from './node_modules/styled-components/native';
+import LoaderComponent from '../loader';
+import ToastComponent from '../toast/toast';
+import IconMarkerComponent from '../icon-marker';
+import CarDetailsScreen from '../../screens/car-details/index';
+import FilterScreen from '../../screens/filter/index';
+import { debounce } from './node_modules/lodash';
 
 const initialRegion = {
   latitude: 49.2800565,

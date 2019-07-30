@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from './node_modules/react';
+import PropTypes from './node_modules/prop-types';
 import { Text, View, TouchableOpacity } from 'react-native';
-import styled from 'styled-components/native';
+import styled from './node_modules/styled-components/native';
 
 export default class ToastComponent extends Component {
   state = {

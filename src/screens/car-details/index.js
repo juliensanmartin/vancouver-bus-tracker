@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import CarDetailsComponent from '../../components/CarDetails/car-details';
-import { fetchDistance, fetchDirection } from '../../store/Distance/actions';
-import { propagateErrorLinking } from '../../store/Error/actions';
+import CarDetailsComponent from '../../components/car-details';
+import { fetchDistance, fetchDirection } from '../../store/distance/actions';
+import { propagateErrorLinking } from '../../store/error/actions';
 
 class CarDetails extends Component {
   componentWillMount() {
