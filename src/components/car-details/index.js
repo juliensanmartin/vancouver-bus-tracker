@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Platform, Linking, Animated, StyleSheet, Modal } from 'react-native';
-import styled from 'styled-components/native';
+import styled from 'styled-components';
 import { Icon } from 'react-native-elements';
 import Interactable from 'react-native-interactable';
 import ToastComponent from '../toast/toast';
@@ -192,14 +192,14 @@ CarDetailsComponent.propTypes = {
 
 const styles = StyleSheet.create({
   card: {
-    flexDirection: 'column',
-    justifyContent: 'space-around',
-    backgroundColor: '#EDFAFD',
+    flex-direction: 'column',
+    justify-content: 'space-around',
+    background-color: '#EDFAFD',
     padding: 10,
     margin: 10,
-    borderRadius: 6,
-    marginHorizontal: 10,
-    marginVertical: 100,
+    border-radius: 6,
+    margin-horizontal: 10,
+    margin-vertical: 100,
     shadowColor: '#7f7f7f',
     shadowOffset: { width: 0, height: 0 },
     shadowRadius: 2,
@@ -215,54 +215,54 @@ const TouchableOpacityStyled = styled.TouchableOpacity`
 `;
 
 const DetailsContainer = styled.View`
-  flexDirection: column;
-  justifyContent: space-around;
-  backgroundColor: #edfafd;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #edfafd;
 `;
 
 const ViewMainDetails = styled.View`
-  flexDirection: row;
-  justifyContent: space-between;
-  alignItems: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 const ViewMainDetailsCentered = styled.View`
-  flexDirection: row;
-  justifyContent: center;
-  alignItems: center;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 `;
 
 const ViewSecondaryDetails = styled.View`
-  flexDirection: row;
-  justifyContent: space-between;
-  alignItems: center;
-  paddingVertical: 10;
-  paddingHorizontal: 10;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-vertical: 10;
+  padding-horizontal: 10;
 `;
 
 const ViewName = styled.View`
-  flexDirection: column;
-  justifyContent: center;
-  paddingVertical: 10;
-  paddingHorizontal: 10;
+  flex-direction: column;
+  justify-content: center;
+  padding-vertical: 10;
+  padding-horizontal: 10;
 `;
 
 const ViewItem = styled.View`
-  flexDirection: row;
-  justifyContent: space-between;
-  alignItems: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 const ImageContainer = styled.View`
-  flexDirection: row;
-  justifyContent: center;
-  alignItems: flex-end;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
 `;
 
 const TitleContainer = styled.View`
-  flexDirection: row;
-  justifyContent: center;
-  alignItems: flex-start;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
 `;
 
 const StyledImage = styled.Image`
@@ -281,15 +281,15 @@ const StyledText = styled.Text`
 
 const StyledTitle = styled.Text`
   color: #135589;
-  fontSize: 20;
+  font-size: 20;
 `;
 
 const StyledTextSmall = styled.Text`
   color: #135589;
-  fontSize: 10;
+  font-size: 10;
 `;
 
 const StyledTextBig = styled.Text`
   color: #135589;
-  fontSize: 16;
+  font-size: 16;
 `;

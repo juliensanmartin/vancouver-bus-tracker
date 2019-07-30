@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Animated, StyleSheet, Modal } from 'react-native';
-import styled from 'styled-components/native';
+import styled from 'styled-components';
 import Interactable from 'react-native-interactable';
 
 export default class FilterComponent extends Component {
@@ -122,14 +122,14 @@ FilterComponent.propTypes = {
 
 const styles = StyleSheet.create({
   card: {
-    flexDirection: 'column',
-    justifyContent: 'space-around',
+    flex-direction: 'column',
+    justify-content: 'space-around',
     padding: 10,
     height: 200,
-    backgroundColor: '#EDFAFD',
-    borderRadius: 6,
-    marginHorizontal: 10,
-    marginVertical: 100,
+    background-color: '#EDFAFD',
+    border-radius: 6,
+    margin-horizontal: 10,
+    margin-vertical: 100,
     shadowColor: '#7f7f7f',
     shadowOffset: { width: 0, height: 0 },
     shadowRadius: 2,
@@ -140,21 +140,21 @@ const styles = StyleSheet.create({
 });
 
 const StyledView = styled.View`
-  flexDirection: row;
-  justifyContent: space-between;
-  alignItems: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 const StyledTextView = styled.View`
-  flexDirection: column;
-  justifyContent: space-between;
-  alignItems: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
 `;
 
 const StyledLeftView = styled.View`
-  flexDirection: row;
-  justifyContent: space-between;
-  alignItems: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 const StyledSwitch = styled.Switch`
@@ -165,7 +165,7 @@ const StyledSwitch = styled.Switch`
 const StyledImage = styled.Image`
   height: 30;
   width: 30;
-  marginHorizontal: 20;
+  margin-horizontal: 20;
 `;
 
 const StyledImageLong = styled.Image`
@@ -180,6 +180,6 @@ const StyledText = styled.Text`
 `;
 
 const StyledTextSmall = styled.Text`
-  fontSize: 10;
+  font-size: 10;
   color: #135589;
 `;

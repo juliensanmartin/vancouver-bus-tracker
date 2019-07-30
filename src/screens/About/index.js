@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components/native';
+import styled from 'styled-components';
 
 export default function AboutComponent() {
   return (
@@ -61,47 +61,47 @@ export default function AboutComponent() {
 }
 
 const ViewContainer = styled.View`
-  flexDirection: column;
-  justifyContent: space-around;
+  flex-direction: column;
+  justify-content: space-around;
   height: 500;
-  backgroundColor: #aed9da;
-  marginHorizontal: 20;
-  marginVertical: 10;
+  background-color: #aed9da;
+  margin-horizontal: 20;
+  margin-vertical: 10;
 `;
 
 const StyledView = styled.View`
-  flexDirection: column;
-  justifyContent: space-between;
-  backgroundColor: #edfafd;
-  alignItems: flex-start;
-  borderRadius: 6;
-  borderWidth: 1;
-  marginVertical: 10;
-  shadowColor: #7f7f7f;
-  shadowOffset: 0 0;
-  shadowRadius: 2;
-  shadowOpacity: 0.6;
-  paddingVertical: 10;
-  paddingHorizontal: 10;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #edfafd;
+  align-items: flex-start;
+  border-radius: 6;
+  border-width: 1;
+  margin-vertical: 10;
+  shadow-color: #7f7f7f;
+  shadow-offset: 0 0;
+  shadow-radius: 2;
+  shadow-opacity: 0.6;
+  padding-vertical: 10;
+  padding-horizontal: 10;
 `;
 
 const StyledViewCentered = styled.View`
-  flexDirection: column;
-  justifyContent: space-between;
-  alignItems: center;
-  marginVertical: 10;
-  paddingVertical: 10;
-  paddingHorizontal: 10;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-vertical: 10;
+  padding-vertical: 10;
+  padding-horizontal: 10;
 `;
 
 const StyledViewRow = styled.View`
-  flexDirection: column;
-  justifyContent: space-between;
-  paddingVertical: 5;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-vertical: 5;
 `;
 
 const StyledTextSmall = styled.Text`
-  fontSize: 10;
+  font-size: 10;
 `;
 
 const StyledCreditText = styled.Text`
@@ -113,7 +113,7 @@ const StyledHighlightedText = styled.Text`
 `;
 
 const TitleText = styled.Text`
-  fontSize: 12;
+  font-size: 12;
   color: #2a93d5;
   align-self: center;
 `;

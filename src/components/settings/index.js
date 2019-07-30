@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { View, Text } from 'react-native';
-import styled from 'styled-components/native';
+import styled from 'styled-components';
 import { Slider } from 'react-native-elements';
 
 export default class SettingsComponent extends Component {
@@ -43,17 +43,17 @@ SettingsComponent.propTypes = {
 };
 
 const StyledView = styled.View`
-  justifyContent: center;
-  paddingHorizontal: 20;
-  paddingVertical: 20;
+  justify-content: center;
+  padding-horizontal: 20;
+  padding-vertical: 20;
 `;
 
 const StyledText = styled.Text`
   align-self: center;
-  fontSize: 16;
+  font-size: 16;
 `;
 
 const StyledHours = styled.Text`
   color: #135589;
-  fontSize: 16;
+  font-size: 16;
 `;

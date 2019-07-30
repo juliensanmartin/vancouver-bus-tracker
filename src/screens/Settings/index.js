@@ -1,20 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import SettingsComponent from '../../components/settings';
 import { setModoHoursAvailable } from '../../store/car/actions';
 
-function Settings() {
+function Settings({ currentNumberHours, onHoursChange }) {
   return (
-    <SettingsComponent
-      currentNumberHours={this.props.currentNumberHours}
-      setNumberHours={this.props.onHoursChange}
-    />
+    <SettingsComponent currentNumberHours={currentNumberHours} setNumberHours={onHoursChange} />
   );
 }
 
 Settings.propTypes = {
-  dispatch: PropTypes.func.isRequired,
   currentNumberHours: PropTypes.number.isRequired,
   onHoursChange: PropTypes.func.isRequired
 };

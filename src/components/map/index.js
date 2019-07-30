@@ -8,7 +8,7 @@ import { Icon } from 'react-native-elements';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
-import styled from 'styled-components/native';
+import styled from 'styled-components';
 import LoaderComponent from '../loader';
 import ToastComponent from '../toast/toast';
 import IconMarkerComponent from '../icon-marker';
@@ -256,8 +256,8 @@ const MapContainer = styled.View`
   flex: 1;
   flex-direction: column;
   justify-content: flex-end;
-  alignItems: center;
-  backgroundColor: #f5fcff;
+  align-items: center;
+  background-color: #f5fcff;
 `;
 
 const TouchableOpacityStyle = styled.TouchableOpacity`

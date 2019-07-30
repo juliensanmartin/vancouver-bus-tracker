@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Text, View, TouchableOpacity } from 'react-native';
-import styled from 'styled-components/native';
+import styled from 'styled-components';
 
 export default class ToastComponent extends Component {
   state = {
@@ -42,18 +42,18 @@ ToastComponent.defaultProps = {
 };
 
 const StyledContainer = styled.View`
-  flexDirection: column;
-  justifyContent: center;
-  alignItems: center;
-  marginVertical: 30;
-  marginHorizontal: 30;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-vertical: 30;
+  margin-horizontal: 30;
   height: 50;
   width: 300;
-  backgroundColor: #2a93d5;
+  background-color: #2a93d5;
   opacity: 0.7;
 `;
 
 const StyledText = styled.Text`
   color: #edfafd;
-  fontSize: 14;
+  font-size: 14;
 `;

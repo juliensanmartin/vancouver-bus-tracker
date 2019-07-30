@@ -2,7 +2,7 @@ import React from 'react';
 import { createStackNavigator } from 'react-navigation';
 import { Icon } from 'react-native-elements';
 import { TouchableOpacity } from 'react-native';
-import styled from 'styled-components/native';
+import styled from 'styled-components';
 import MapScreen from '../screens/map';
 import AboutComponent from '../screens/about';
 import Settings from '../screens/settings';
@@ -23,7 +23,7 @@ const AppNavigator = createStackNavigator(
                 name="cog"
                 onPress={() => navigation.navigate('Settings')}
                 color="#135589"
-                containerStyle={{ marginHorizontal: 10 }}
+                containerStyle={{ margin-horizontal: 10 }}
               />
             </TouchableOpacity>
             <TouchableOpacity>
@@ -33,7 +33,7 @@ const AppNavigator = createStackNavigator(
                 name="info-circle"
                 onPress={() => navigation.navigate('About')}
                 color="#135589"
-                containerStyle={{ marginHorizontal: 10 }}
+                containerStyle={{ margin-horizontal: 10 }}
               />
             </TouchableOpacity>
           </StyledRightSideHeader>
@@ -42,7 +42,7 @@ const AppNavigator = createStackNavigator(
           color: '#135589'
         },
         headerStyle: {
-          backgroundColor: '#edfafd'
+          background-color: '#edfafd'
         }
       })
     },
@@ -54,7 +54,7 @@ const AppNavigator = createStackNavigator(
           color: '#135589'
         },
         headerStyle: {
-          backgroundColor: '#edfafd'
+          background-color: '#edfafd'
         }
       }
     },
@@ -66,22 +66,22 @@ const AppNavigator = createStackNavigator(
           color: '#135589'
         },
         headerStyle: {
-          backgroundColor: '#edfafd'
+          background-color: '#edfafd'
         }
       }
     }
   },
   {
     cardStyle: {
-      backgroundColor: '#aed9da',
+      background-color: '#aed9da',
       opacity: 1
     }
   }
 );
 
 const StyledRightSideHeader = styled.View`
-  flexDirection: row;
-  justifyContent: space-around;
+  flex-direction: row;
+  justify-content: space-around;
 `;
 
 export default AppNavigator;

@@ -19,15 +19,15 @@ export default class TabBarComponent extends Component {
     return (
       <Tabs>
         <Tab
-          titleStyle={{ fontWeight: 'bold', fontSize: 10 }}
+          titleStyle={{ fontWeight: 'bold', font-size: 10 }}
           selectedTitleStyle={{ marginTop: -1, marginBottom: 6 }}
           selected={selectedTab === 'feed'}
           title={selectedTab === 'feed' ? 'FEED' : null}
           renderIcon={() => (
             <Icon
               containerStyle={{
-                justifyContent: 'center',
-                alignItems: 'center',
+                justify-content: 'center',
+                align-items: 'center',
                 marginTop: 12
               }}
               color="#5e6977"
@@ -41,15 +41,15 @@ export default class TabBarComponent extends Component {
           <Feed />
         </Tab>
         <Tab
-          titleStyle={{ fontWeight: 'bold', fontSize: 10 }}
+          titleStyle={{ fontWeight: 'bold', font-size: 10 }}
           selectedTitleStyle={{ marginTop: -1, marginBottom: 6 }}
           selected={selectedTab === 'profile'}
           title={selectedTab === 'profile' ? 'PROFILE' : null}
           renderIcon={() => (
             <Icon
               containerStyle={{
-                justifyContent: 'center',
-                alignItems: 'center',
+                justify-content: 'center',
+                align-items: 'center',
                 marginTop: 12
               }}
               color="#5e6977"
