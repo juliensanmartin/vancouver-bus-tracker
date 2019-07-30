@@ -1,4 +1,4 @@
-import Polyline from './node_modules/@mapbox/polyline';
+import Polyline from '@mapbox/polyline';
 import {
   GET_CURRENT_DISTANCE,
   GET_CURRENT_DIRECTION,

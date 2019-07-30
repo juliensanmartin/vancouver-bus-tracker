@@ -1,5 +1,5 @@
 import React from 'react';
-import { StackNavigator } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation';
 import { Icon } from 'react-native-elements';
 import { TouchableOpacity } from 'react-native';
 import styled from 'styled-components/native';
@@ -7,7 +7,7 @@ import MapScreen from '../screens/map';
 import AboutComponent from '../screens/about';
 import Settings from '../screens/settings';
 
-export default StackNavigator(
+const AppNavigator = createStackNavigator(
   {
     Map: {
       screen: MapScreen,
@@ -80,6 +80,8 @@ export default StackNavigator(
 );
 
 const StyledRightSideHeader = styled.View`
-  flexdirection: row;
-  justifycontent: space-around;
+  flexDirection: row;
+  justifyContent: space-around;
 `;
+
+export default AppNavigator;

@@ -1,8 +1,8 @@
-import React, { Component } from './node_modules/react';
-import PropTypes from './node_modules/prop-types';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { View, Text } from 'react-native';
-import styled from './node_modules/styled-components/native';
-import { Slider } from './node_modules/react-native-elements';
+import styled from 'styled-components/native';
+import { Slider } from 'react-native-elements';
 
 export default class SettingsComponent extends Component {
   constructor(props) {
@@ -43,17 +43,17 @@ SettingsComponent.propTypes = {
 };
 
 const StyledView = styled.View`
-  justifycontent: center;
-  paddinghorizontal: 20;
-  paddingvertical: 20;
+  justifyContent: center;
+  paddingHorizontal: 20;
+  paddingVertical: 20;
 `;
 
 const StyledText = styled.Text`
   align-self: center;
-  fontsize: 16;
+  fontSize: 16;
 `;
 
 const StyledHours = styled.Text`
   color: #135589;
-  fontsize: 16;
+  fontSize: 16;
 `;

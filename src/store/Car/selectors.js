@@ -1,5 +1,5 @@
-import { createSelector } from './node_modules/reselect';
-import { reduce, reject } from './node_modules/lodash';
+import { createSelector } from 'reselect';
+import { reduce, reject } from 'lodash';
 
 // Selector for car model : define and transform data for component usage :
 // http://redux.js.org/docs/recipes/ComputingDerivedData.html

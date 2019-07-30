@@ -1,7 +1,7 @@
-import React, { Component } from './node_modules/react';
-import PropTypes from './node_modules/prop-types';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Animated, StyleSheet, Modal } from 'react-native';
-import styled from './node_modules/styled-components/native';
+import styled from 'styled-components/native';
 import Interactable from 'react-native-interactable';
 
 export default class FilterComponent extends Component {
@@ -140,21 +140,21 @@ const styles = StyleSheet.create({
 });
 
 const StyledView = styled.View`
-  flexdirection: row;
-  justifycontent: space-between;
-  alignitems: center;
+  flexDirection: row;
+  justifyContent: space-between;
+  alignItems: center;
 `;
 
 const StyledTextView = styled.View`
-  flexdirection: column;
-  justifycontent: space-between;
-  alignitems: flex-start;
+  flexDirection: column;
+  justifyContent: space-between;
+  alignItems: flex-start;
 `;
 
 const StyledLeftView = styled.View`
-  flexdirection: row;
-  justifycontent: space-between;
-  alignitems: center;
+  flexDirection: row;
+  justifyContent: space-between;
+  alignItems: center;
 `;
 
 const StyledSwitch = styled.Switch`
@@ -165,7 +165,7 @@ const StyledSwitch = styled.Switch`
 const StyledImage = styled.Image`
   height: 30;
   width: 30;
-  marginhorizontal: 20;
+  marginHorizontal: 20;
 `;
 
 const StyledImageLong = styled.Image`
@@ -180,6 +180,6 @@ const StyledText = styled.Text`
 `;
 
 const StyledTextSmall = styled.Text`
-  fontsize: 10;
+  fontSize: 10;
   color: #135589;
 `;

@@ -215,54 +215,54 @@ const TouchableOpacityStyled = styled.TouchableOpacity`
 `;
 
 const DetailsContainer = styled.View`
-  flexdirection: column;
-  justifycontent: space-around;
-  backgroundcolor: #edfafd;
+  flexDirection: column;
+  justifyContent: space-around;
+  backgroundColor: #edfafd;
 `;
 
 const ViewMainDetails = styled.View`
-  flexdirection: row;
-  justifycontent: space-between;
-  alignitems: center;
+  flexDirection: row;
+  justifyContent: space-between;
+  alignItems: center;
 `;
 
 const ViewMainDetailsCentered = styled.View`
-  flexdirection: row;
-  justifycontent: center;
-  alignitems: center;
+  flexDirection: row;
+  justifyContent: center;
+  alignItems: center;
 `;
 
 const ViewSecondaryDetails = styled.View`
-  flexdirection: row;
-  justifycontent: space-between;
-  alignitems: center;
-  paddingvertical: 10;
-  paddinghorizontal: 10;
+  flexDirection: row;
+  justifyContent: space-between;
+  alignItems: center;
+  paddingVertical: 10;
+  paddingHorizontal: 10;
 `;
 
 const ViewName = styled.View`
-  flexdirection: column;
-  justifycontent: center;
-  paddingvertical: 10;
-  paddinghorizontal: 10;
+  flexDirection: column;
+  justifyContent: center;
+  paddingVertical: 10;
+  paddingHorizontal: 10;
 `;
 
 const ViewItem = styled.View`
-  flexdirection: row;
-  justifycontent: space-between;
-  alignitems: center;
+  flexDirection: row;
+  justifyContent: space-between;
+  alignItems: center;
 `;
 
 const ImageContainer = styled.View`
-  flexdirection: row;
-  justifycontent: center;
-  alignitems: flex-end;
+  flexDirection: row;
+  justifyContent: center;
+  alignItems: flex-end;
 `;
 
 const TitleContainer = styled.View`
-  flexdirection: row;
-  justifycontent: center;
-  alignitems: flex-start;
+  flexDirection: row;
+  justifyContent: center;
+  alignItems: flex-start;
 `;
 
 const StyledImage = styled.Image`
@@ -281,15 +281,15 @@ const StyledText = styled.Text`
 
 const StyledTitle = styled.Text`
   color: #135589;
-  fontsize: 20;
+  fontSize: 20;
 `;
 
 const StyledTextSmall = styled.Text`
   color: #135589;
-  fontsize: 10;
+  fontSize: 10;
 `;
 
 const StyledTextBig = styled.Text`
   color: #135589;
-  fontsize: 16;
+  fontSize: 16;
 `;

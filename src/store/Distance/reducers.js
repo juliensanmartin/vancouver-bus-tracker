@@ -6,7 +6,7 @@ import {
   RESET_DIRECTION
 } from './actions.type';
 
-const distance = (state = {}, action) => {
+const currentDistance = (state = {}, action) => {
   switch (action.type) {
     case GET_CURRENT_DISTANCE:
       return action.distance;
@@ -35,8 +35,10 @@ const positionInVancouver = (state = false, action) => {
   }
 };
 
-export default distance = combineReducers({
-  distance,
+const distance = combineReducers({
+  currentDistance,
   direction,
   positionInVancouver
 });
+
+export default distance;

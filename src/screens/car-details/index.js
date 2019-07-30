@@ -48,7 +48,7 @@ CarDetails.propTypes = {
 
 function mapStateToProps(state) {
   return {
-    distance: state.distance.distance,
+    distance: state.distance.currentDistance,
     positionInVancouver: state.distance.positionInVancouver,
     errorLinking: state.errors.errorLinking
   };

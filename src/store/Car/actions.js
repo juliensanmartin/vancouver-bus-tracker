@@ -1,4 +1,4 @@
-import { reduce } from './node_modules/lodash';
+import { reduce } from 'lodash';
 import {
   SET_EVO_VISIBILITY,
   SET_CAR2GO_VISIBILITY,

@@ -1,5 +1,5 @@
-import React, { PureComponent } from './node_modules/react';
-import styled from './node_modules/styled-components/native';
+import React from 'react';
+import styled from 'styled-components/native';
 
 export default function AboutComponent() {
   return (
@@ -61,47 +61,47 @@ export default function AboutComponent() {
 }
 
 const ViewContainer = styled.View`
-  flexdirection: column;
-  justifycontent: space-around;
+  flexDirection: column;
+  justifyContent: space-around;
   height: 500;
-  backgroundcolor: #aed9da;
-  marginhorizontal: 20;
-  marginvertical: 10;
+  backgroundColor: #aed9da;
+  marginHorizontal: 20;
+  marginVertical: 10;
 `;
 
 const StyledView = styled.View`
-  flexdirection: column;
-  justifycontent: space-between;
-  backgroundcolor: #edfafd;
-  alignitems: flex-start;
-  borderradius: 6;
-  borderwidth: 1;
-  marginvertical: 10;
-  shadowcolor: #7f7f7f;
-  shadowoffset: 0 0;
-  shadowradius: 2;
-  shadowopacity: 0.6;
-  paddingvertical: 10;
-  paddinghorizontal: 10;
+  flexDirection: column;
+  justifyContent: space-between;
+  backgroundColor: #edfafd;
+  alignItems: flex-start;
+  borderRadius: 6;
+  borderWidth: 1;
+  marginVertical: 10;
+  shadowColor: #7f7f7f;
+  shadowOffset: 0 0;
+  shadowRadius: 2;
+  shadowOpacity: 0.6;
+  paddingVertical: 10;
+  paddingHorizontal: 10;
 `;
 
 const StyledViewCentered = styled.View`
-  flexdirection: column;
-  justifycontent: space-between;
-  alignitems: center;
-  marginvertical: 10;
-  paddingvertical: 10;
-  paddinghorizontal: 10;
+  flexDirection: column;
+  justifyContent: space-between;
+  alignItems: center;
+  marginVertical: 10;
+  paddingVertical: 10;
+  paddingHorizontal: 10;
 `;
 
 const StyledViewRow = styled.View`
-  flexdirection: column;
-  justifycontent: space-between;
-  paddingvertical: 5;
+  flexDirection: column;
+  justifyContent: space-between;
+  paddingVertical: 5;
 `;
 
 const StyledTextSmall = styled.Text`
-  fontsize: 10;
+  fontSize: 10;
 `;
 
 const StyledCreditText = styled.Text`
@@ -113,7 +113,7 @@ const StyledHighlightedText = styled.Text`
 `;
 
 const TitleText = styled.Text`
-  fontsize: 12;
+  fontSize: 12;
   color: #2a93d5;
   align-self: center;
 `;

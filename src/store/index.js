@@ -1,13 +1,13 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { createLogger } from 'redux-logger';
 import thunk from 'redux-thunk';
-import car from './Car/reducers';
-// import distance from './Distance/reducers';
-import errors from './Error/reducers';
+import car from './car/reducers';
+import distance from './distance/reducers';
+import errors from './error/reducers';
 
 const appReducer = combineReducers({
   car,
-  // distance,
+  distance,
   errors
 });
 

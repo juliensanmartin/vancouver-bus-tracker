@@ -1,4 +1,4 @@
-import { schema, normalize } from './node_modules/normalizr';
+import { schema, normalize } from 'normalizr';
 
 // Define our normalize objects : http://redux.js.org/docs/recipes/reducers/NormalizingStateShape.html
 

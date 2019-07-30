@@ -4,17 +4,17 @@ import {
   ActivityIndicator,
   TouchableOpacity
 } from 'react-native';
-import { Icon } from './node_modules/react-native-elements';
-import React, { Component } from './node_modules/react';
-import PropTypes from './node_modules/prop-types';
+import { Icon } from 'react-native-elements';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
-import styled from './node_modules/styled-components/native';
+import styled from 'styled-components/native';
 import LoaderComponent from '../loader';
 import ToastComponent from '../toast/toast';
 import IconMarkerComponent from '../icon-marker';
 import CarDetailsScreen from '../../screens/car-details/index';
 import FilterScreen from '../../screens/filter/index';
-import { debounce } from './node_modules/lodash';
+import { debounce } from 'lodash';
 
 const initialRegion = {
   latitude: 49.2800565,
@@ -256,8 +256,8 @@ const MapContainer = styled.View`
   flex: 1;
   flex-direction: column;
   justify-content: flex-end;
-  alignitems: center;
-  backgroundcolor: #f5fcff;
+  alignItems: center;
+  backgroundColor: #f5fcff;
 `;
 
 const TouchableOpacityStyle = styled.TouchableOpacity`
