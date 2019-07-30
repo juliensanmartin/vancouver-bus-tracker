@@ -2,7 +2,7 @@ import { forEach, chunk, toString, flatten, filter } from 'lodash';
 import moment from 'moment';
 
 export const getModoCars = hoursRequested => {
-  return fetch('https://bookit.modo.coop/api/fleet/cars')
+  return fetch('bookit.modo.coop/api/v2/car_list')
     .then(response => response.json())
     .then(responseJson => getModoAvailableCars(getCarIds(responseJson), hoursRequested));
 };
@@ -35,7 +35,7 @@ export const getModoAvailableCars = (carIds, hoursRequested) => {
 };
 
 const getModoCarsByPack = (carIds, startDate, endDate, hoursRequested) => {
-  const request = `https://bookit.modo.coop/api/availability/${startDate}/${endDate}?cars=${toString(
+  const request = `https://bookit.modo.coop/api/v2/availability/${startDate}/${endDate}?cars=${toString(
     carIds
   )}`;
   return fetch(request)
