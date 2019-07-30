@@ -6,7 +6,7 @@ import { fetchVisibleCars, updateRegion, activateLoader } from '../../store/car/
 import { checkPositionInVancouver, resetDirection } from '../../store/distance/actions';
 import { isLoaded, getRegionMarkers } from '../../store/car/selectors';
 
-class MapScreen extends Component {
+class Map extends Component {
   componentDidMount() {
     this.props.dispatch(fetchVisibleCars());
   }
@@ -38,7 +38,7 @@ class MapScreen extends Component {
   }
 }
 
-MapScreen.propTypes = {
+Map.propTypes = {
   markers: PropTypes.array.isRequired,
   dispatch: PropTypes.func.isRequired,
   loading: PropTypes.bool.isRequired,
@@ -79,4 +79,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(MapScreen);
+)(Map);
