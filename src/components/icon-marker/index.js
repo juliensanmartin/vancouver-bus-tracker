@@ -36,7 +36,7 @@ export default class IconMarkerComponent extends Component {
       marker = (
         <Badge
           value={name}
-          containerStyle={{ background-color: '#104f86' }}
+          containerStyle={{ 'background-color': '#104f86' }}
           textStyle={{ color: '#FFDD33' }}
         />
       );
@@ -46,7 +46,7 @@ export default class IconMarkerComponent extends Component {
       marker = (
         <Badge
           value={avlBikes}
-          containerStyle={{ background-color: '#008ABF' }}
+          containerStyle={{ 'background-color': '#008ABF' }}
           textStyle={{ color: '#ffffff' }}
         />
       );

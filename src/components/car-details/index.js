@@ -192,14 +192,14 @@ CarDetailsComponent.propTypes = {
 
 const styles = StyleSheet.create({
   card: {
-    flex-direction: 'column',
-    justify-content: 'space-around',
-    background-color: '#EDFAFD',
+    flexDirection: 'column',
+    justifyContent: 'space-around',
     padding: 10,
-    margin: 10,
-    border-radius: 6,
-    margin-horizontal: 10,
-    margin-vertical: 100,
+    height: 200,
+    backgroundColor: '#EDFAFD',
+    borderRadius: 6,
+    marginHorizontal: 10,
+    marginVertical: 100,
     shadowColor: '#7f7f7f',
     shadowOffset: { width: 0, height: 0 },
     shadowRadius: 2,

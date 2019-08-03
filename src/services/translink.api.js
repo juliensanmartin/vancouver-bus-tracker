@@ -5,7 +5,7 @@ const translinkConfig = {
 
 const params = `?apiKey=${translinkConfig.key}`;
 
-const getAvailableBus = () => {
+export const getAvailableBus = () => {
   const request = new Request(`${translinkConfig.url}${params}`, {
     headers: new Headers({
       accept: 'application/JSON'
@@ -16,8 +16,4 @@ const getAvailableBus = () => {
     .catch(error => {
       console.error(error);
     });
-};
-
-export default {
-  getAvailableBus
 };
