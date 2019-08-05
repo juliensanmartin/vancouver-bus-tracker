@@ -9,7 +9,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
 import styled from 'styled-components';
-import LoaderComponent from '../loader';
+import Spinner from '../spinner';
 import ToastComponent from '../toast/toast';
 import IconMarkerComponent from '../icon-marker';
 import CarDetailsScreen from '../../screens/car-details/index';
@@ -205,9 +205,7 @@ export default class MapComponent extends Component {
             onClose={this.onHideFilterScreen}
           />
         )}
-        <LoaderContainer>
-          <LoaderComponent animating={this.props.loading} />
-        </LoaderContainer>
+        {this.props.loading && <Spinner />}
         <View>
           <ToastComponent
             message="Problems to locate your position"
@@ -262,11 +260,6 @@ const MapContainer = styled.View`
 
 const TouchableOpacityStyle = styled.TouchableOpacity`
   align-self: flex-start;
-  flex: 1;
-`;
-
-const LoaderContainer = styled.View`
-  align-self: center;
   flex: 1;
 `;
 

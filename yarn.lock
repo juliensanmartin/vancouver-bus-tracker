@@ -3506,10 +3506,6 @@ lottie-ios@2.5.0:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/lottie-ios/-/lottie-ios-2.5.0.tgz#55c808e785d4a6933b0c10b395530b17098b05de"
 
-lottie-ios@^3.0.3:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/lottie-ios/-/lottie-ios-3.0.3.tgz#8b1d6463a04fe59509a55ec8cc5feea7f40f4cf3"
-
 lottie-react-native@2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/lottie-react-native/-/lottie-react-native-2.6.1.tgz#330d24fa6aac5928ea63f8e181b9b7d930a1a119"
@@ -3518,15 +3514,6 @@ lottie-react-native@2.6.1:
     lottie-ios "2.5.0"
     prop-types "^15.5.10"
     react-native-safe-module "^1.1.0"
-
-lottie-react-native@^3.0.4:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/lottie-react-native/-/lottie-react-native-3.0.4.tgz#4dad0274d470c0b3ef61cc7330c5637b2c713f7f"
-  dependencies:
-    invariant "^2.2.2"
-    lottie-ios "^3.0.3"
-    prop-types "^15.5.10"
-    react-native-safe-modules "^1.0.0"
 
 loud-rejection@^1.0.0:
   version "1.6.0"
@@ -4768,12 +4755,6 @@ react-native-safe-area-view@^0.14.1:
 react-native-safe-module@^1.1.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/react-native-safe-module/-/react-native-safe-module-1.2.0.tgz#a23824ca24edc2901913694a76646475113d570d"
-  dependencies:
-    dedent "^0.6.0"
-
-react-native-safe-modules@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/react-native-safe-modules/-/react-native-safe-modules-1.0.0.tgz#10a918adf97da920adb1e33e0c852b1e80123b65"
   dependencies:
     dedent "^0.6.0"
 
